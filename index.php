@@ -18,14 +18,20 @@
    <body>
       <div class=banner>
          <h1>📑 procrastiSlides v0.01 🎬</h1>
-         <hr/>
       </div>
-      <p class="centered">only a simple presentation(s) site that respects your dark mode setting and has responsive web design. <br>
-         non-intruisive ads, no tracking, nothing but quick slides from plain text/markdown. <br>
-      </p>
-      <h3 class="centered">🏃 great for procratinators who need to get a presentation out, quick! 👟</h3>
-      <h3 class="centered">🏫 try copy and pasting your school notes! that might even work 😂</h3>
-      <hr>
+      <div style='border-top: 2px solid white'>
+         <p class="centered">
+            Only a simple presentation(s) site that respects your dark mode setting and has responsive web design. <br>
+            non-intruisive ads, no tracking, nothing but quick slides from plain text/markdown. <br>
+         </p>
+         <h3 class="centered">
+            🏃 Great for procratinators who need to get a presentation out, quick! 👟
+         </h3>
+         <h3 class="centered">
+            🏫 Try copy and pasting your school notes! that might even work 😂
+         </h3>
+      </div>
+      
       <?php include "includes/nav-header.php" ?>
       <?php if(isset($_POST['compile']))
          {
@@ -34,7 +40,7 @@
 
            ?>
       <div class="centered">
-         <h3>🎨 please select your presentation theme 🎭</h3>
+         <h3>🎨 Please select your presentation theme 🎭</h3>
          <form class="" action="download.php" method="post">
             <table class="centered">
                <th>
@@ -75,11 +81,11 @@
       <?php if(!isset($_POST['compile']))
          { ?>
       <div>
-         <h2 class="centered">plain text or markdown goes here:</h2>
+         <p class='centered tomato'>PLAIN TEXT OR MARKDOWN GOES HERE:</p>
          <form class="" action="index.php" method="post">
             <textarea id="user-input" name="user-input" rows="8" cols="80"><?php echo $_SESSION['user-input']; ?></textarea>
             <div class="centered">
-               <button type="submit" name="compile">create presentation</button>
+               <button type="submit" class='create_btn' name="compile">Create Presentation</button>
             </div>
          </form>
          <script type="text/javascript">
@@ -88,22 +94,32 @@
          </script>
          <br>
          <a name="how-to">
-            <h2 class="centered">quick read how-to:</h2>
+            <h2 class="centered">Quick Read How-to:</h2>
          </a>
-         <ul>
-            <li>type '#' to indicate that you are starting a new slide and then press ↵ (enter/return) twice.</li>
-            <li>you can add a "slide title" after each '#' to name that portion of your presentation.</li>
+         <ul class='quick-how-to'>
+            <li>
+               Type <b style='color: tomato'>"#"</b> to indicate that you are starting a new slide and then press <b style='color: tomato'>↵</b> (enter/return) twice.
+            </li>
+            <li>
+               You can add a <b>"slide title"</b> after each <b style='color: tomato'>"#"</b> to name that portion of your presentation.
+            </li>
             <ul>
-               <li>a space between "#" and your slide title is required: <br><br> </li>
-               <ul class="no-bullets">
-                  <li># [YOUR TITLE GOES HERE]</li>
-               </ul>
-               <br>
+               <li>
+                  a space between <b style='color: tomato'>"#"</b> and your slide title is required: <br><br>
+               </li>
             </ul>
-            <li>type/format text underneath the '#' for the slide contents.</li>
+            <div class='centered' style='font-size: 1.2rem; margin-left: -3rem; text-align: center'># [YOUR TITLE GOES HERE]</div>
+            <br>
+            <li>
+               Type/format text underneath the <b style='color: tomato'>"#"</b> for the slide contents.
+            </li>
             <ul>
-               <li>make sure to start typing your slide content two ↵'s ("enter key presses") away from the "#".</li>
-               <li>lists require to be formatted in this manner as well: <br><br> </li>
+               <li>
+                  Make sure to start typing your slide content two <b style='color: tomato'>↵</b>'s ("enter key presses") away from the <b style='color: tomato'>"#"</b>.
+               </li>
+               <li>
+                  Lists require to be formatted in this manner as well: <br><br> 
+               </li>
                <ul class="no-bullets">
                   <li># slide title <br><br>
                      This is a list <br><br>
@@ -116,7 +132,7 @@
          </ul>
          <br>
          <p class="centered"> <i>It's highly recommended that you use markdown lists rather than plain text lists</i> </p><br>
-         <h2 class="centered">short video how-to:</h2>
+         <h2 class="centered">Short How-To Video :</h2>
          </a><br>
          <div class="responsive-video">
             <iframe class="video" height="854px" width="480px" src="https://www.youtube.com/embed/Cj-NkNKFnN8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

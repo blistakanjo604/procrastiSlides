@@ -9,12 +9,12 @@ body {
 }
 
 a {
-	color: lightblue ;
+	color: lightblue;
 }
 
-a:visited {
+/* a:visited {
 	color: gray ;
-}
+} */
 
 h1 {
 	text-align: center ;
@@ -24,9 +24,15 @@ h1.forte {
 	text-align: center ;
 	font-family: 'Forte', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: 36px;
-  padding:10px;
+  	padding:10px;
 }
 
+.tomato {
+	color: tomato;
+	font-weight: 600;
+	font-size: 0.8rem;
+	margin-top: 2rem;
+}
 
 h2 {
 	color: tomato ;
@@ -137,6 +143,10 @@ button {
 	text-align: center;
 }
 
+button:hover {
+	background-color: #3a3838;
+}
+
 .responsive-video {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 -> 9/16x100 */
@@ -152,7 +162,41 @@ button {
 
 ul.no-bullets {
     list-style-type: none;
-		font-family: monospace;
+	font-family: monospace;
+}
+
+.head-links {
+	display: flex;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+}
+
+.head-links div {
+	width: 100%;
+	height: 100%;
+	flex-grow: 1;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+}
+
+.head-links div:hover {
+	background-color: rgb(71, 71, 71);
+
+}
+
+.head-links div a {
+	font-size: 1.8rem;
+	text-decoration: none;
+}
+
+.quick-how-to li {
+	margin-top: 0.5rem;
+}
+
+.create_btn {
+	cursor: pointer;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 }
 
 /* SimpleMDE Theme Dark v0.0.0 https://github.com/xcatliu/simplemde-theme-dark#readme */
